@@ -27,7 +27,7 @@ Git Command Line Interface - Optimal Version: `v2.7.4`
 Open your terminal and type commands below.
 ```
 cd Desktop
-git clone https://github.com/MrAugu/DBH
+git clone https://github.com/ClearlyElevated/DBH
 cd DBH
 npm install
 ```
