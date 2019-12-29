@@ -3,7 +3,7 @@ DBH is an open source discord bot list with a handfull of features. `The only of
 
 ---
 
-`ALL OTHER BOT LISTS INCLUDING [GlennBotList](https://glennbotlist.xyz/) `ARE USING A FORK OF THIS SOFTWARE. WITH MINIMAL TO NO EDITS APPLIED. USE WITH CAUTION`
+`ALL OTHER BOT LISTS INCLUDING` [GlennBotList](https://glennbotlist.xyz/) `ARE USING A FORK OF THIS SOFTWARE. WITH MINIMAL TO NO EDITS APPLIED. USE WITH CAUTION`
 
 ---
 
