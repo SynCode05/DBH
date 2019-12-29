@@ -1,5 +1,6 @@
 ## About
-DBH is an open source discord bot list with a handfull of features. No official instance of this list is online anymore. Use any list named *Discord Bot House* at your own risk.
+DBH is an open source discord bot list with a handfull of features. `The only official instance of this siftware is` [Discord House](https://www.discordjs.services `ALL OTHER BOT LISTS INCLUDING [GlennBotList](https://glennbotlist.xyz/) `ARE USING A FORK OF THIS SOFTWARE. WITH MINIMAL TO NO EDITS APPLIED. USE WITH CAUTION`
+
 
 Special thanks to [Zaydme](https://github.com/Zaydme) for his contributions to the list.
 
