@@ -1,4 +1,3 @@
-## About
 DBH is an open source discord bot list with a handfull of features. `The only official instance of this software is` [Discord House](https://www.discordjs.services)
 
 ---
@@ -7,6 +6,8 @@ DBH is an open source discord bot list with a handfull of features. `The only of
 
 ---
 
+## About
+---
 Special thanks to [Zaydme](https://github.com/Zaydme) for his contributions to the list.
 
 ## Maintenance
