@@ -6,9 +6,9 @@ Special thanks to [Zaydme](https://github.com/Zaydme) for his contributions to t
 ## Maintenance
 No new features are going to be implemented outside pull requests from peoples. All issues opened that require fixes will be fixed.
 
-For help & support join [MrAugu's Discord Server](https://discord.gg/rk7cVyk).
+For help & support join [Discord Server](https://discord.plus/discordhouse).
 
-To support this and many other projects, [become a patron](https://www.patreon.com/mraugu).
+To support this and many other projects, [become a patron](https://www.patreon.com/clearlyelevated).
 
 ## Requirments
 NodeJS - Optimal Version: `v12.3.1`
