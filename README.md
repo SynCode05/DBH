@@ -1,5 +1,5 @@
 ## About
-DBH is an open source discord bot list with a handfull of features. `The only official instance of this siftware is` [Discord House](https://www.discordjs.services 
+DBH is an open source discord bot list with a handfull of features. `The only official instance of this siftware is` [Discord House](https://www.discordjs.services)
 
 ---
 
