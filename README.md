@@ -1,6 +1,6 @@
 DBH is an `open source` discord bot list with a handfull of features. 
 
-Open Source meaning: `you are more then welcome to use this for ideas or use bits and pieces of the software.` **__But__ downloading it, changing any of the original info & turning it on ** `AKA SELF HOSTING` **__IS STRICTLY PROHIBITED & AGAINST THE LICANSE AGREEMENT. 
+Open Source meaning: `you are more then welcome to use this for ideas or use bits and pieces of the software.` **__But__ downloading it, changing any of the original info & turning it on** `AKA SELF HOSTING` **__IS STRICTLY PROHIBITED & AGAINST THE LICANSE AGREEMENT.__**
 
 **__ANYONE CAUGHT IN VIOLATION TO THESE TERMS WILL HAVE ACTION TAKEN AT THE FULLEST EXTENT.__**
 
