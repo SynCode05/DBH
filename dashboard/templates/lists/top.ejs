@@ -9,7 +9,7 @@
 <h2 style="padding-top: 20px; margin-left: 3%;color:white"><i class="fas fa-line-chart"></i> Most Voted Bots:</h2>
 <div style="padding: 35px 20px 20px 35px">
 <div class="row">
-  <% featuredBots.forEach(theBot => { if (!bot.users.get(theBot.id)) bot.users.get(theBot.id) = { presence: { status: "offline" }, username: theBot.name  } %>
+  <% featuredBots.forEach(theBot => { %>
     <%- include("../blocks/card.ejs", { theBot, bot }); %>
   <% }); %>
 </div>

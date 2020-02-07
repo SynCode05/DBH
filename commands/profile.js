@@ -1,3 +1,4 @@
+  
 const Discord = require("discord.js");
 const profiles = require("../models/profile.js");
 
@@ -10,7 +11,7 @@ module.exports.run = async (client, message, args, reply) => {
 
   const profileEmbed = new Discord.MessageEmbed()
     .setAuthor(member.tag, member.displayAvatarURL({ format: "png", size: 512 }))
-    .setColor("BLUE")
+    .setColor("WHITE")
     .addField(`User:`, `${member.tag}`)
     .addField(`Bio:`, `${profile.bio}`);
   reply(profileEmbed);

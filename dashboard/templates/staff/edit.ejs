@@ -1,0 +1,40 @@
+
+<%- include('../blocks/header', { bot, user, title: "Staff | Discord Bot House", embedding: { default: true } }) %>
+
+<div class="container1 main-bkg" stfont-size: 13px; style="margin-left: 3%; margin-right: 3%;margin-top: 5px;margin-bottom:  20px;box-shadow:0 8px 16px 0 rgba(0, 0, 0, 1.2); color: #fff; background-color: #2c2f33">
+<h1 style="color: #ffffff; padding-top: 20px; padding-left: 30px;"><%= botClient.username %></h1>
+<style>
+  .form-check-label {
+    font-size: 17px!important;
+    position: relative;
+    left: 2em;
+    color: #fff!important;
+  }
+</style>
+<form method="post" style="padding-left: 30px; padding-right: 30px; padding-bottom: 30px;">
+  <hr />
+  <div class="form-check">
+    <input type="checkbox" name="featured" class="form-check-input" id="exampleCheck1" <%= db[0].featured == true ? "checked" : "" %>>
+    <label class="form-check-label" for="exampleCheck1">Featured</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="trust" class="form-check-input" id="exampleCheck2" <%= db[0].trusted == true ? "checked" : "" %>>
+    <label class="form-check-label" for="exampleCheck2">Trusted</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="approved" class="form-check-input" id="exampleCheck3" <%= db[0].approved == true ? "checked" : "" %>>
+    <label class="form-check-label" for="exampleCheck3">Approved</label>
+  </div>
+  <hr />
+  <div class="form-group">
+    <label for="exampleInputEmail1">Vanity Code</label>
+    <input type="text" name="vanity" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Leave empty to remain unset." value="<%= db[0].vanityUrl %>">
+    <small id="emailHelp" class="form-text text-muted">Please provide an unique and an unused vanity url.</small>
+  </div>
+  <hr />
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
+</form>
+
+</div>
+
+<%- include('../blocks/footer') %>

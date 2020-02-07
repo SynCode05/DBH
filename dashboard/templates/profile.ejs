@@ -1,7 +1,7 @@
-<%- include('blocks/header', { bot, user, title: `${discordUser.username} | Discord Bot House`, embedding: { default: true } }) %>
+<%- include('blocks/header', { bot, user, title: `${discordUser.username} | Discord House`, embedding: { default: true } }) %>
 
 <meta name="description" content="Bio : <%=profile.bio%>">
-<meta name="og:title" property="og:title" content="<%=discordUser.tag%>'s profile | Discord Bot House">
+<meta name="og:title" property="og:title" content="<%=discordUser.tag%>'s profile | Discord-App.Tk">
 <meta name="og:description" property="og:description" content="Bio : <%=profile.bio%>">
 <meta name="twitter:card" content="Bio : <%=profile.bio%>">
 <meta property="og:image" content="<%= bot.users.get(discordUser.id).displayAvatarURL({ size:512 }); %>">
@@ -15,7 +15,7 @@
         </div>
         <div class="faceCon">
 
-        <img src="<%= bot.users.get(discordUser.id).displayAvatarURL({ size:512 }); %>" class="img-raised rounded-circle"/></img>
+        <img src="<%= bot.users.get(discordUser.id) ? bot.users.get(discordUser.id).displayAvatarURL({ size: 512 }) : "Not Found" %>" class="img-raised rounded-circle"/></img>
 
       </div>
 
@@ -29,7 +29,7 @@
         <div class="nl">
           <h3 class="name"> <i class="fab fa-discord"></i> <%=discordUser.tag%></h3>
           <% if (profile.certifiedDev) {%>
-            <h3 class="loca">Certified developer</h3>
+            <h3 class="loca">Certified Developer</h3>
             <% } else {%>
               <h3 class="loca">Developer</h3>
               <% }  %>
@@ -65,11 +65,10 @@
                     Rank
                  </li>-->
              </ul>
-      <div class="imgcon">
+      <div class="main-bkg">
         <% if (bots.length == 0) { %>
      <div style="text-align:center;">
-           <br>
-
+       <br>
       <p style="font-size: 25px;color:white; padding: 10px;text-align: center;"><i class="fas fa-walking"></i>  This user hasn't listed any bots yet.</p>
      <br>
       </div>
@@ -88,78 +87,7 @@
     </div>
   </div>
 </center>
-<script>
-    $(window).scroll(function(){
-      $("#bgd").css("opacity", 1 - $(window).scrollTop() / 1000);
-    });
-  </script>
 
-<!------ Include the above in your HEAD tag
-<div class="container profile ">
-  <div class="row">
-    <div class="span12">
-      <div class="well well-small clearfix  hero-bkg-animated"style="color:white;box-shadow:5px 5px 5px black">
-        <div class="row-fluid">
-          <div class="span2">
-             <img src="<%= bot.users.get(discordUser.id).displayAvatarURL({ size:512 }); %>" class="img-raised rounded-circle img-fluid"/>
-          </div>
-          <div class="span4">
-             <h2><%=discordUser.username%></h2>
-            <ul class="unstyled">
-                <% if (profile.certifiedDev) {%>
-                  <li><i class="icon-keyboard"></i>Certified Developer</li>
-                <% } else {%>
-                  <li><i class="icon-keyboard"></i> Developer</li>
-           <% }  %>
-              <li><i class="fab fa-discord"></i> <%=discordUser.tag%></li>
-
-              <li><i class="icon-pencil"></i> <%=profile.bio%></li>
-              <br>
-              <a href="#" class="fa fa-github"></a>
-              <a href="#" class="fa fa-globe"></a>
-              <a href="#" class="fa fa-twitter"></a>
-              <a href="#" class="fa fa-linkedin"></a>
-              <a href="#" class="fa fa-youtube"></a>
-              <a href="#" class="fa fa-instagram"></a>
-              <a href="#" class="fa fa-reddit"></a>
-            </ul>
-          </div>
-          <div class="span6">
-          <ul class="inline stats">
-               <li>
-                 <span><%= bots.length %></span>
-                 Bots
-              </li>
-              <li>
-                 <span><%= profile.karma %></span>
-                 Karma
-              </li>
-               <li>
-                 <span>12</span>
-                 Rank
-              </li>
-          </ul>---------->
-            <div><!--/span6-->
-            </div><!--/row-->
-          </div>
-      <!--Body content
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>--><!--
-<br><br><br><br><br>
-
-<div class="container1 main-bkg" style="margin-left: 3%; margin-right: 3%;margin-top: 70px;margin-bottom: 20px;box-shadow:0 8px 16px 0 rgba(0, 0, 0, 1.2); color: #fff; border-radius: 30px">
-
-88
-      </div>
-      </div>
-      </div>
-
-</div>-->
 <style>
 
 img{max-width:100%;width:auto\9;height:auto;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;}
@@ -185,7 +113,7 @@ img{max-width:100%;width:auto\9;height:auto;vertical-align:middle;border:0;-ms-i
 .con {
   width: 92%;
   height: 100%;
-  background: #194e55;
+  background: ##1d1e21;
   border-radius: 8px;
   -webkit-box-shadow: 1px 1.2px 5px 1px #333;
   box-shadow: 1px 1.2px 5px 1px #000;
@@ -291,7 +219,6 @@ img{max-width:100%;width:auto\9;height:auto;vertical-align:middle;border:0;-ms-i
   -o-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
-  font-family: 'Oswald';
   font-size: 3vw;
 }
 
@@ -299,7 +226,6 @@ img{max-width:100%;width:auto\9;height:auto;vertical-align:middle;border:0;-ms-i
   color: #BED2FF;
   font-weight: 100;
   margin-top: 30px;
-  font-family: 'Nunito';
   font-size: 2vw;
 }
 
@@ -352,23 +278,20 @@ img{max-width:100%;width:auto\9;height:auto;vertical-align:middle;border:0;-ms-i
 
 .name {
   font-weight: 100;
-  font-family: 'Nunito';
   font-size: 19px;
   letter-spacing: 0.8px;
 }
 
 .loca {
-  color: #BED2FF;
-  font-weight: 100;
-  letter-spacing: 0.8px;
+  color: #7289DA;
+  ont-weight: bold;
   font-size: 15px;
-  font-family: 'Oswald';
 }
 
 .line1, .line2 {
   position: relative;
-  top: 10px;
-  border: 1px solid #113438;
+  top: 5px;
+  border: 1px solid #7289DA;
   width: 50px;
   margin: auto;
 }
@@ -378,7 +301,6 @@ img{max-width:100%;width:auto\9;height:auto;vertical-align:middle;border:0;-ms-i
   font-weight: 100;
   letter-spacing: 0.8px;
   font-size: 17px;
-  font-family: 'oswald';
   margin: 30px 0 15px 0;
 }
 
@@ -429,7 +351,6 @@ li {
 a {
   text-decoration: none;
   color: #EEF;
-  font-family: 'oswald';
 }
 
 .imgcon {

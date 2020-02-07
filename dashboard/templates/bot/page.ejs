@@ -39,12 +39,12 @@
 						<span class="<%= bot.users.get(thebot.id).presence.status %>">• <%= htmlFor[bot.users.get(thebot.id).presence.status] %></span>
 						<span class="btn btn-lg" style="margin-top:0px;margin-bottom:0px;"><i class="fas fa-chevron-up"></i>  <%= thebot.data.upvotes.toLocaleString() %></span><br>
 						<p></p>	<p></p>
-						<a class="label label-primary" style="color:white; background-color: #184f57;"><%= thebot.data.serverCount %> Servers</a>
-						<a class="label label-primary" style="color:white; background-color: #184f57;"><%= thebot.data.shardCount %> Shard(s)</a><br>
+						<a class="label label-primary" style="color:white; background-color: #7289da;"><%= thebot.data.serverCount %> Servers</a>
+						<a class="label label-primary" style="color:white; background-color: #7289da;"><%= thebot.data.shardCount %> Shard(s)</a><br>
 						<% if(user && thebot.data.mainOwner == user.id || user && thebot.data.owners.includes(user.id) ) { %>
 						<p></p>	<p></p>
-						<a class="btn w-25" href="/bot/<%= thebot.data.id %>/delete" style=" background-color: #dc3545;"><span class="fa fa-trash"></span> Delete</a>
-						<a class="btn w-25" style=" background-color: #ffc107;" href="/bot/<%= thebot.data.id %>/edit"><span class="fa fa-pencil"></span> Edit</a>
+						<a class="btn w-25" href="/bot/<%= thebot.data.id %>/delete" style=" background-color: #ff0000;"><span class="fa fa-trash"></span> Delete</a>
+						<a class="btn w-25" style=" background-color: #7289da;" href="/bot/<%= thebot.data.id %>/edit"><span class="fa fa-pencil"></span> Edit</a>
 				  	<% }; %>
 					</center>
 
@@ -58,16 +58,16 @@
                 <li><p style="color:white;">Bot Prefix: <span><code><%= thebot.data.prefix %></code></span></p></li>
 								<li><p>Library: <span><code><%= thebot.data.library %></code></p></li>
 						    <li><% if(thebot.data.website !== "none" ) {%>
-									<button  onclick="window.location.href = '<%= thebot.data.website %>';" style=" background-color: #184f57;" type="button" class="btn">Visit Website</button>
+									<button  onclick="window.location.href = '<%= thebot.data.website %>';" style=" background-color: #7289da;" type="button" class="btn">Visit Website</button>
 				<% }%>
         <% if(thebot.data.github !== "none" ) {%>
-          <button  onclick="window.location.href = '<%= thebot.data.website %>';" style=" background-color: #184f57;" type="button" class="btn">Visit GitHub</button>
+          <button  onclick="window.location.href = '<%= thebot.data.website %>';" style=" background-color: #7289da;" type="button" class="btn">Visit GitHub</button>
         <% }%>
-				<button  onclick="window.location.href = '<%= thebot.data.server %>';" style=" background-color: #184f57;"type="button" class="btn">Join Server</button></li>
+				<button  onclick="window.location.href = '<%= thebot.data.server %>';" style=" background-color: #7289da;"type="button" class="btn">Join Server</button></li>
 				<li>
-          <a href="<%= thebot.data.invite %>" style=" background-color: #184f57;" class="btn w-25">Invite</a>
-          <a href='/bot/<%= thebot.data.id %>/vote' cmethod="post" type="text" value="vote" style="  background-color: #184f57;" class="btn w-25">Vote</a>
-          <a  style="background-color: #184f57; padding:  10px 5px;" class="btn w-25" data-toggle="modal" data-target="#reportModal">Report</a>
+          <a href="<%= thebot.data.invite %>" style=" background-color: #7289da;" class="btn w-25">Invite</a>
+          <a href='/bot/<%= thebot.data.id %>/vote' cmethod="post" type="text" value="vote" style="  background-color: #7289da;" class="btn w-25">Vote</a>
+          <a  style="background-color: #ff0000; padding:  10px 5px;" class="btn w-25" data-toggle="modal" data-target="#reportModal">Report</a>
         </li>
       </ul>
       <fieldset class="rating">
@@ -85,7 +85,7 @@
         <input onclick="window.location.href ='/bot/<%= thebot.data.id %>/rate?stars=2'"  type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad"></label>
         <input onclick="window.location.href ='/bot/<%= thebot.data.id %>/rate?stars=1'"  type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks"></label>
     </fieldset>
-    <a class="label label-dark" style="color:yellow"><%=avg.toFixed(1) %><i class='fa fa-star'></i> </a> 
+    <a class="label label-dark" style="color:#7289da"><%=avg.toFixed(1) %><i class='fa fa-star'></i> </a> 
   <ul>
 
     <li>
@@ -105,7 +105,7 @@
  <div class="modal-dialog modal-dialog-centered" role="document">
    <div class="modal-content main-bkg">
      <div class="modal-header">
-         <h2 class="modal-title" id="exampleModalLongTitle" style="color: #fff;"><i class="fas fa-flag"></i> Report:</h2>
+         <h2 class="modal-title" id="exampleModalLongTitle" style="color: #fff;"><i class="fas fa-flag"></i> File Report:</h2>
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
          <span aria-hidden="true">&times;</span>
        </button>

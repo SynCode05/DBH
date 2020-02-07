@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args, reply) => {
 
   const botEmbed = new Discord.MessageEmbed()
     .setAuthor(owner.tag, owner.displayAvatarURL({ format: "png", size: 512 }))
-    .setColor("BLUE")
+    .setColor("ORANGE")
     .addField("Name:", `${theBot.name}`)
     .addField("Monthly Upvotes:", `${theBot.upvotes.toLocaleString()}`)
     .addField("Library:", `${theBot.library}`)
@@ -35,9 +35,12 @@ module.exports.run = async (client, message, args, reply) => {
     .addField("Prefix:", `${theBot.prefix}`)
     .addField("Support Server:", `${theBot.server}`)
     .addField("Invite:", `${theBot.invite}`)
-    .addField(`On ${theBot.serverCount === 0 ? "N/A" : theBot.serverCount} Servers`, `This bot was created by ${otherOwners.join(", ")}.`)
+    .addField(
+      `On ${theBot.serverCount === 0 ? "N/A" : theBot.serverCount} Servers`,
+      `This bot was created by ${otherOwners.join(", ")}.`
+    )
     .setThumbnail(userBot.displayAvatarURL())
-    .setDescription(theBot.shortDesc)
+    .setDescription(theBot.shortDesc);
   reply(botEmbed);
 };
 

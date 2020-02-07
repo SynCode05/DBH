@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args, reply) => {
   profiles.findOne({ id: message.author.id }, async (err, entry) => {
     if (err) console.log(err);
     if (!entry) {
-      const usr = new Profiles({
+      const usr = new profiles({
         id: message.author.id,
         bio: myBio,
         certifiedDev: false,

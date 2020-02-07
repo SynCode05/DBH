@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args, reply) => {
   client.channels.get(client.config.channels.declineLogsChannel).send(`<@${bot}> by ${allOwners.join(" ")} has been rejected by ${message.author}.`);
 
   const declineEmbed = new Discord.MessageEmbed()
-    .setColor("BLUE")
+    .setColor("RED")
     .setTitle("Bot Rejected")
     .setDescription(`**Bot**: ${bt.tag} (ID: ${bt.id})\n**Moderator**: ${message.author.tag} (ID: ${message.author.id})\n**Reason**: ${reason}`)
     .setTimestamp();

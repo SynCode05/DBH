@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args, reply) => {
   }
 
   const deleteEmbed = new Discord.MessageEmbed()
-    .setColor("BLUE")
+    .setColor("RED")
     .setTitle("Bot Forcefull Deleted")
     .setDescription(`**Bot**: ${bt.tag} (ID: ${bt.id})\n**Moderator**: ${message.author.tag} (ID: ${message.author.id})\n**Reason**: ${reason}`)
     .setTimestamp();

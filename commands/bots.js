@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args, reply) => {
   const userBots = await require("../models/bots.js").find({ mainOwner: member.id, approved: true });
   var embed = new Discord.MessageEmbed()
     .setAuthor(`${member.tag}'s bots:`, member.displayAvatarURL({ format: "png", size: 512 }))
-    .setColor("BLUE");
+    .setColor("RED");
 
   if (userBots.length < 1) {
     embed.setDescription(`The specified user does not have any published bots.`);
